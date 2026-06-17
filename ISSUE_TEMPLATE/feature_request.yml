@@ -1,0 +1,55 @@
+name: Feature request
+description: Propose an outcome for a user or research workflow.
+title: "[Feature]: "
+labels: ["type:feature"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+    validations:
+      required: true
+  - type: input
+    id: user
+    attributes:
+      label: Proposed user
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Proposed outcome
+    validations:
+      required: true
+  - type: textarea
+    id: in-scope
+    attributes:
+      label: In scope
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: checkboxes
+    id: repositories
+    attributes:
+      label: Affected repositories
+      options:
+        - label: ketqat-sdk
+        - label: ketqat-web
+        - label: ketqat-planning
+        - label: .github
+  - type: textarea
+    id: implications
+    attributes:
+      label: Scientific or reproducibility implications
+

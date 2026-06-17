@@ -1,0 +1,48 @@
+name: Research task
+description: Track a research question or benchmark investigation.
+title: "[Research]: "
+labels: ["type:research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+    validations:
+      required: true
+  - type: textarea
+    id: literature
+    attributes:
+      label: Relevant literature
+    validations:
+      required: true
+  - type: textarea
+    id: benchmark
+    attributes:
+      label: Benchmark definition
+    validations:
+      required: true
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Expected artifacts
+    validations:
+      required: true
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Reproducibility requirements
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of completion
+    validations:
+      required: true
+

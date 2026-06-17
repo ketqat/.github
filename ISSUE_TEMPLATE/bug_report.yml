@@ -1,0 +1,50 @@
+name: Bug report
+description: Report something that is not working.
+title: "[Bug]: "
+labels: ["type:bug"]
+body:
+  - type: input
+    id: component
+    attributes:
+      label: Repository or component
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+  - type: textarea
+    id: scientific-impact
+    attributes:
+      label: Scientific impact, when applicable
+
