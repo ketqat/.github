@@ -34,9 +34,14 @@ This repository is public, and `ketqat-web` and `ketqat-planning` are private.
 
 ## Scope statement
 
-`README.md` and `profile/README.md` state the project's scope publicly. Per [ADR 0001](https://github.com/ketqat/ketqat-planning/blob/main/docs/architecture/adr/0001-focus-on-qec-and-algorithms.md), KetQat does not provide QPU access aggregation, marketplaces, billing, hardware-provider status monitoring, or credential storage.
+`README.md` states the project's scope publicly. [ADR 0004](https://github.com/ketqat/ketqat-planning/blob/main/docs/architecture/adr/0004-scientific-execution-and-hardware-characterization-scope.md) was **accepted on 2026-07-28** and supersedes the provider clause of [ADR 0001](https://github.com/ketqat/ketqat-planning/blob/main/docs/architecture/adr/0001-focus-on-qec-and-algorithms.md).
 
-ADR 0004 proposes narrowing that clause to permit hardware characterization snapshots and user-initiated BYOC execution. It is **Proposed, not Accepted**. Do not change the public scope statement here until a maintainer accepts it -- this repository is where the project's scope is stated to the outside world, so it must not lead the decision.
+The public wording must keep these apart, because conflating them is what makes a research platform read as a hardware reseller:
+
+- **Not offered:** QPU access aggregation, marketplace, billing, pricing aggregation, provider status monitoring, persistent credential storage.
+- **Offered:** hardware characterization snapshots, and user-initiated execution on hardware the user already has access to, with credentials supplied per job and never stored.
+
+Do not describe hardware execution in a way that implies KetQat brokers access, resells time, or is a supported path to production quantum computing services. Do not describe unbuilt capability as shipping.
 
 ## Commands
 
