@@ -1,11 +1,19 @@
 # KetQat
 
-KetQat is open-source research infrastructure for reproducible quantum error-correction and quantum-algorithm experiments.
+**KetQat is Quantum Decision Intelligence.** It estimates what a computation would require
+on a fault-tolerant quantum computer, and refuses to answer where the evidence does not
+support one — no dates, no prices, no vendor rankings.
 
-The current work focuses on two domains:
+Beneath that sits open-source research infrastructure for reproducible quantum
+error-correction and quantum-algorithm experiments, which is where the evidence comes from:
 
 - Quantum Error Correction and fault-tolerant quantum computing
 - Quantum algorithms and reproducible algorithm evaluation
+
+You can check a published result yourself, with no account and no checkout —
+[verify a published result](https://github.com/ketqat/ketqat-sdk/blob/main/docs/verify-a-published-result.md).
+A matching hash proves the bytes are unchanged; it is not attestation, and we are careful
+about the difference.
 
 KetQat is intended to help researchers discover, describe, run, benchmark, compare, and share research artifacts with enough context to make results reproducible. Demo records and demo runs are clearly labeled and are not scientific performance claims.
 
