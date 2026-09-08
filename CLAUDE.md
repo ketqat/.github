@@ -34,11 +34,19 @@ This repository is public, and `ketqat-web` and `ketqat-planning` are private.
 
 ## Scope statement
 
+The maintainer's 2026-09-08 commercial rebuild directive selects small Qiskit
+teams and recurring PR/SDK regression checks as the current priority. The
+public source CLI is a pre-release, and hosted Team selling remains gated.
+KetQat's own software subscription is authorized; old blanket no-billing
+wording does not prohibit it. Label price and demand assumptions honestly.
+Existing research rights, privacy, review requirements and QPU resale exclusions
+remain. Align public wording with what can actually be used.
+
 `README.md` states the project's scope publicly. [ADR 0004](https://github.com/ketqat/ketqat-planning/blob/main/docs/architecture/adr/0004-scientific-execution-and-hardware-characterization-scope.md) was **accepted on 2026-07-28** and supersedes the provider clause of [ADR 0001](https://github.com/ketqat/ketqat-planning/blob/main/docs/architecture/adr/0001-focus-on-qec-and-algorithms.md).
 
 The public wording must keep these apart, because conflating them is what makes a research platform read as a hardware reseller:
 
-- **Not offered:** QPU access aggregation, marketplace, billing, pricing aggregation, provider status monitoring, persistent credential storage.
+- **Not offered:** QPU access aggregation, marketplace, QPU billing, pricing aggregation, provider status monitoring, persistent credential storage.
 - **Offered:** hardware characterization snapshots, and user-initiated execution on hardware the user already has access to, with credentials supplied per job and never stored.
 
 Do not describe hardware execution in a way that implies KetQat brokers access, resells time, or is a supported path to production quantum computing services. Do not describe unbuilt capability as shipping.
