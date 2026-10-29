@@ -9,7 +9,7 @@ run it locally with the KetQat SDK. Free products need no account, no payment
 and no telemetry.
 
 ```bash
-pip install "ketqat[algorithms] @ git+https://github.com/ketqat/ketqat-sdk@a7084829e847f815f6fb39f4eab8a557ac3494af#subdirectory=python"
+pip install "ketqat[algorithms] @ git+https://github.com/ketqat/ketqat-sdk@c9c7ca466eed078d8d740d4333897ca5858df217#subdirectory=python"
 ketqat catalog search
 ketqat catalog run grover-search@1.0.0 --param n_qubits=5 --param marked=3 --seed 7
 ```
