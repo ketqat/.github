@@ -1,46 +1,52 @@
 # KetQat
 
-**Catch quantum regressions before you merge.**
+**Official quantum software from KetQat, run on your own computer.**
 
-KetQat helps small teams using Qiskit compare circuit changes and SDK upgrades
-against an explicit baseline and policy. Run your Python circuit locally or in
-your own CI. Get JSON, offline HTML and an Actions summary showing what changed,
-which measured limits were exceeded and what to inspect next.
+KetQat selects, prepares, verifies and maintains quantum software in three
+categories: **Quantum Algorithms**, **Quantum Error Correction** and
+**Quantum Information**. Find a product in the catalog, copy its command, and
+run it locally with the KetQat SDK. Free products need no account, no payment
+and no telemetry.
 
-**[Try the free source quickstart](https://github.com/ketqat/ketqat-sdk/blob/e5d37278155058944faf7b32526d8dc787065281/docs/regression-quickstart.md)**
-or use the
-[copyable two-qubit project](https://github.com/ketqat/ketqat-sdk/tree/e5d37278155058944faf7b32526d8dc787065281/examples/regression/sample-project).
-This pre-release install uses an actual public source revision while package
-publication is pending. No account, forced publishing, QPU or language model is
-required. The example deliberately removes a CX gate; it is not a reported
-Qiskit defect.
+```bash
+pip install "ketqat[algorithms] @ git+https://github.com/ketqat/ketqat-sdk@c9c7ca466eed078d8d740d4333897ca5858df217#subdirectory=python"
+ketqat catalog search
+ketqat catalog run grover-search@1.0.0 --param n_qubits=5 --param marked=3 --seed 7
+```
 
-Full captures stay on your machine or CI runner. Optional private team policy,
-baseline approval and shared history are the proposed paid service, still under
-review and **not on sale**. USD 149 per workspace per month is an unvalidated
-price hypothesis. Local checks remain free; your CI provider's compute charges
-are separate. No customer adoption or profitability is claimed.
+The package is not on PyPI yet. Until the first release, install from the
+pinned public commit shown above. Every product records its version,
+parameters, seed, environment and a result hash in a local run record, so you
+can reproduce a run.
 
-The initial scope is ideal Qiskit simulation on 1–12 qubits. A distribution
-within tolerance does not prove whole-program correctness or circuit equivalence.
-Compiled gate counts are not measured hardware cost or speed. Failed, uncertain,
-incompatible and unexecuted comparisons have distinct outcomes.
+Each product states who invented the method, which open-source code it builds
+on and under what license, and what KetQat did. "Officially provided by KetQat"
+does not mean KetQat invented it. Products list their assumptions, scope and
+limitations, and say how they were validated.
 
-Existing resource-estimation, QEC and quantum-algorithm research remains
-available through [KetQat](https://ketqat.com). You can still
-[check a published result](https://github.com/ketqat/ketqat-sdk/blob/main/docs/verify-a-published-result.md).
-A matching hash establishes byte integrity, not independent scientific review.
+**Pro** adds further KetQat implementations and workflows for local use under a
+signed, time-limited entitlement. It is **not on sale yet**; any price shown is
+a proposal.
 
 ## Repositories
 
-- [`ketqat-sdk`](https://github.com/ketqat/ketqat-sdk): free local/CI regression CLI, public contracts, portable reports, examples and existing research runners.
-- `ketqat-web` (private): application and service layer for team management, authorization, billing and existing research workflows.
-- `ketqat-planning`: private vision, roadmap, ADR, RFC, governance, and cross-repository planning repository.
+- [`ketqat-sdk`](https://github.com/ketqat/ketqat-sdk): the catalog definitions, the Python SDK and CLI that run products locally, public contracts and reproducibility hashing. Apache-2.0.
+- [`ketqat-benchmarks`](https://github.com/ketqat/ketqat-benchmarks): heavier benchmark and differential-validation instruments kept out of the SDK.
+- `ketqat-web` (private): the ketqat.com catalog, profiles, reviews and Pro distribution.
+- `ketqat-planning` (private): vision, roadmap, ADRs and cross-repository planning.
 
 ## Contributing
 
-Open bugs and feature requests in the repository that owns the implementation. Open cross-repository initiatives, RFCs, and planning questions in `ketqat-planning`.
+Anyone can improve KetQat products through pull requests, issues, documentation
+and scientific validation in the public repositories. KetQat publishes and
+maintains the official products, and adopted contributions keep their
+contributor and original-author credit.
 
-Security reports should follow the security policy in the affected repository or the organization health files. Do not post secrets, credentials, private datasets, or undisclosed vulnerabilities in public issues.
+Open bugs and feature requests in the repository that owns the implementation.
+Security reports follow the security policy of the affected repository. Do not
+post secrets, credentials, private datasets or undisclosed vulnerabilities in
+public issues.
 
-KetQat does not provide commercial QPU access, QPU billing, provider credentials, or hardware-access aggregation.
+KetQat does not resell QPU time or store provider credentials.
+
+Community: [Discord](https://discord.gg/KcJcRJv6pr) · [X](https://x.com/ket_qat) · [LinkedIn](https://www.linkedin.com/company/ketqat) · [Bluesky](https://bsky.app/profile/ketqat.bsky.social)
