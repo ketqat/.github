@@ -12,6 +12,7 @@ This repository has no `AGENTS.md`. The organization-wide conventions in the `AG
 - `ISSUE_TEMPLATE/` -- shared issue forms (bug report, feature request, documentation, research task) and `config.yml`
 - `PULL_REQUEST_TEMPLATE.md` -- default PR template
 - `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `GOVERNANCE.md`, `SECURITY.md`, `SUPPORT.md`, `LICENSE`
+- `social/brief.md` -- the brief an automated writer reads, as raw `main`, to draft KetQat's daily X, LinkedIn and Bluesky posts. Section 3 ("What is true now") must match reality, so update it and "Last reviewed" whenever status changes. The writer reads only merged `main`.
 
 ## Blast radius
 
